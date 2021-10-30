@@ -4,18 +4,15 @@ import styles from "./FeedbackOptions.module.css";
 
 export default function FeedbackOptions({ options, handleClick }) {
   return (
-    <div className={styles.container}>
+    <ul className={styles.container}>
       {options.map((option) => (
-        <button
-          className={styles.button}
-          key={option}
-          name={option}
-          onClick={handleClick}
-        >
-          {option}
-        </button>
+        <li key={option}>
+          <button className={styles.button} name={option} onClick={handleClick}>
+            {option}
+          </button>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 }
 
